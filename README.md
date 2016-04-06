@@ -1,2 +1,9 @@
-This is the security Web App for CINS 448
+####CINS 448: Security
+###Web App development to test and attack
 
+#Members
+Chase
+Jason
+Justin
+Mark
+Sebastien
