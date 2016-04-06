@@ -1,7 +1,7 @@
-####CINS 448: Security
-###Web App development to test and attack
+###CINS 448: Security
+####Web App development to test and attack
 
-#Members
+#####Members
 Chase
 Jason
 Justin
