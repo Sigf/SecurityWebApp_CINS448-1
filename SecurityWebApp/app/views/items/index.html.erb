@@ -1,3 +1,7 @@
+<script>
+  var current_user_id = <%= current_user.id %>;
+</script>
+
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Items</h1>
@@ -27,7 +31,7 @@
           <td><%= link_to 'Edit', edit_item_path(item) %></td>
           <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <% else %>
-          <td><%= link_to 'Add', item %></td>
+          <td><button onclick="add_to_cart('<%= item.name %>',<%= item.price %>);">Add</button></td>
         <% end %>
       </tr>
     <% end %>

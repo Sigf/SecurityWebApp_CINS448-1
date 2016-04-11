@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  resources :items
   root to: "items#index"
+  post 'user_item/add', to: 'user_item#add'
+  resources :items
+  resources :user_item
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -21,3 +21,9 @@
     {name: "CD", description: "", image: "", price: 30, stock: 12},
     {name: "WD", description: "", image: "", price: 20, stock: 15}
     ])
+
+  user_itmes = UserItem.create([
+    {name: "AA", price: 10, count: 2, user_id: 2},
+    {name: "CD", price: 30, count: 1, user_id: 2},
+    {name: "WD", price: 10, count: 5, user_id: 2}
+    ])
