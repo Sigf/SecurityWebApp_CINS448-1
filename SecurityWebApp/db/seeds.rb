@@ -6,13 +6,13 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-  admins = User.create([
-    {email: 'admin@app.com', password: "a", password_confirmation: "a", is_admin:1}
-    ])
+  admins = User.create(
+    {email: 'admin@app.com', password: "password", password_confirmation: "password", is_admin:1}
+    )
 
-  users = User.create([
-    {email: 'a@a.com', password: "a", password_confirmation: "a", is_admin:0}
-    ])
+  users = User.create(
+    {email: 'a@a.com', password: "aaaaaaaa", password_confirmation: "aaaaaaaa", is_admin:0}
+    )
 
   items = Item.create([
     {name: "AA", description: "", image: "", price: 10, stock: 1},
