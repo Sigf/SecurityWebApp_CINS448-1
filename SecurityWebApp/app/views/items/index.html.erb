@@ -22,9 +22,13 @@
         <td><%= item.image %></td>
         <td><%= item.price %></td>
         <td><%= item.stock %></td>
-        <td><%= link_to 'Show', item %></td>
-        <td><%= link_to 'Edit', edit_item_path(item) %></td>
-        <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if current_user.is_admin? %>
+          <td><%= link_to 'Show', item %></td>
+          <td><%= link_to 'Edit', edit_item_path(item) %></td>
+          <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% else %>
+          <td><%= link_to 'Add', item %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +36,7 @@
 
 <br>
 
-<%= link_to 'New Item', new_item_path %>
+<% if current_user.is_admin? %>
+  <%= link_to 'New Item', new_item_path %>
+<% end %>
+<%= link_to 'Logout', destroy_user_session_path, method: :delete %>
